@@ -1,6 +1,4 @@
 node_modules
-src/index.html
-src/style.css
 src/app.js
 tests/task.test.js
 .github/workflows/ci.yml
