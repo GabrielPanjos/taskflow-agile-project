@@ -1,0 +1,7 @@
+node_modules
+src/index.html
+src/style.css
+src/app.js
+README.md
+tests/task.test.js
+.github/workflows/ci.yml

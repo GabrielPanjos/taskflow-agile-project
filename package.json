@@ -1,0 +1,14 @@
+{
+  "name": "taskflow",
+  "version": "1.0.0",
+  "description": "Sistema simples de gerenciamento de tarefas",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gabriel",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
