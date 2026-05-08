@@ -18,9 +18,9 @@ function addTask() {
 
   const input = document.getElementById("taskInput");
 
-  const task = createTask(input.value, priority);
-
   const priority = document.getElementById("priorityInput").value;
+
+  const task = createTask(input.value, priority);
 
   if (!task) {
     alert("Digite uma tarefa válida");
@@ -41,7 +41,7 @@ function renderTasks() {
 
   taskList.innerHTML = "";
 
-  tasks.forEach((task) => {
+  tasks.forEach(task => {
     const li = document.createElement("li");
 
     li.innerHTML = `
@@ -82,3 +82,7 @@ function toggleTask(id) {
     renderTasks();
   }
 }
+
+module.exports = {
+  createTask
+};
