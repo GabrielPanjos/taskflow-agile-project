@@ -13,6 +13,8 @@ function createTask(title) {
 }
 
 function addTask() {
+  if (typeof document === "undefined") return;
+
   const input = document.getElementById("taskInput");
 
   const task = createTask(input.value);
@@ -30,6 +32,8 @@ function addTask() {
 }
 
 function renderTasks() {
+  if (typeof document === "undefined") return;
+
   const taskList = document.getElementById("taskList");
 
   taskList.innerHTML = "";
