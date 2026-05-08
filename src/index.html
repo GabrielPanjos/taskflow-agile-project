@@ -1,24 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TaskFlow</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>TaskFlow</h1>
 
-  <div class="container">
-    <h1>TaskFlow</h1>
+      <select id="priorityInput">
+        <option value="Baixa">Baixa</option>
+        <option value="Média">Média</option>
+        <option value="Alta">Alta</option>
+      </select>
 
-    <div class="task-form">
-      <input type="text" id="taskInput" placeholder="Digite uma tarefa">
-      <button onclick="addTask()">Adicionar</button>
+      <div class="task-form">
+        <input type="text" id="taskInput" placeholder="Digite uma tarefa" />
+        <button onclick="addTask()">Adicionar</button>
+      </div>
+
+      <ul id="taskList"></ul>
     </div>
 
-    <ul id="taskList"></ul>
-  </div>
-
-  <script src="app.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

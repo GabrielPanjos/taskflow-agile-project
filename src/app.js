@@ -1,6 +1,6 @@
 const tasks = [];
 
-function createTask(title) {
+function createTask(title, priority = "Baixa") {
   if (!title || title.trim() === "") {
     return null;
   }
@@ -8,6 +8,7 @@ function createTask(title) {
   return {
     id: Date.now(),
     title,
+    priority,
     done: false,
   };
 }
@@ -17,7 +18,9 @@ function addTask() {
 
   const input = document.getElementById("taskInput");
 
-  const task = createTask(input.value);
+  const task = createTask(input.value, priority);
+
+  const priority = document.getElementById("priorityInput").value;
 
   if (!task) {
     alert("Digite uma tarefa válida");
@@ -38,12 +41,12 @@ function renderTasks() {
 
   taskList.innerHTML = "";
 
-  tasks.forEach(task => {
+  tasks.forEach((task) => {
     const li = document.createElement("li");
 
     li.innerHTML = `
       <span class="${task.done ? "done" : ""}">
-        ${task.title}
+        ${task.title} - (${task.priority})
       </span>
 
       <div>
@@ -71,7 +74,7 @@ function deleteTask(id) {
 }
 
 function toggleTask(id) {
-  const task = tasks.find(task => task.id === id);
+  const task = tasks.find((task) => task.id === id);
 
   if (task) {
     task.done = !task.done;
